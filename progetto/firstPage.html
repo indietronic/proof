@@ -3,29 +3,21 @@
 	<head>
 
 		<title>Titolo pagina</title>
+	<script data-main="js/bower_components/common" src="js/bower_components/requirejs/require.js"></script>
+		<script type="text/javascript">
+			require(['common'], function () {
+				require(['pages/firstPage']);
+			});
 
+		</script>
 	</head>
 	<body >
-	<div ng-app="myApp">
-		
 		<div ng-controller="myController">
 			<div>{{pippo}}</div>
 		</div>
-	</div>
-		
-
-
-
-
 
 	</body>
-	<script data-main="js/bower_components/common" src="js/bower_components/requirejs/require.js"></script>
-	<script type="text/javascript">
-		require(['common'], function () {
-			require(['pages/firstPage']);
-		});
-
-	</script>
+	
 
 
 	</script>

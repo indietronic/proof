@@ -1,6 +1,14 @@
-require(['angular/angular.min'], function(){
+define(function () {
 	
-	var Application = angular.module('myApp', []);
+	var Application = angular.module('myApp', [])
+
+	.config(function ($controllerProvider){
+
+		Application.controller = $controllerProvider.register;
+
+
+	});
+
 	return Application;
 
 });
