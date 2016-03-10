@@ -21,6 +21,10 @@
     "jquery": "^2.2.1",
     "requirejs": "^2.1.22",
     "bootstrap": "^3.3.6",
-    "domReady": "^2.0.1"
+    "domReady": "^2.0.1",
+    "angular-ui-router": "^0.2.18",
+    "ui-router-extras": "^0.1.0",
+    "angular-couch-potato": "^0.2.3",
+    "oclazyload": "^1.0.9"
   }
 }
