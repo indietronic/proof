@@ -40,13 +40,14 @@ define(['angular-couch-potato',
                 Application.factory = $provide.factory;
                 Application.filter = $filterProvider.register;
                 Application.directive = $compileProvider.directive;
-	}
-	.run(['$couchPotato', '$rootScope', '$state', function ($couchPotato, $rootScope, $state) {
+	}    )
+    .run(['$couchPotato', '$rootScope', '$state', function ($couchPotato, $rootScope, $state) {
                     Application.lazy = $couchPotato;
     }]);
 
 
-	);
+
+
 	couchPotato.configureApp(Application);
 	return Application;
 

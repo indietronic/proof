@@ -8,7 +8,7 @@ requirejs.config({
     'bootstrap' : 'lib/bower_components/bootstrap/dist/js/bootstrap.min',
     'domReady' : 'lib/bower_components/domReady/domReady', 
     'angular-couch-potato': 'lib/bower_components/angular-couch-potato/dist/angular-couch-potato',
-    'oc-lazy-load' : 'lib/bower_components/oclazyload/dist/ocLazyLoad.min',
+    'oc-lazy-load' : 'lib/bower_components/oclazyload/dist/ocLazyLoad',
     'angular-ui-router': 'lib/bower_components/angular-ui-router/release/angular-ui-router.min',
     //'ui-router-extras': 'lib/bower_components/ui-router-extras/release/ct-ui-router-extras',
 
@@ -19,7 +19,7 @@ requirejs.config({
   },
   shim: {
         'app': {
-            deps: ['bootstrap', 'jquery', 'angular', 'oc-lazy-load']
+            deps: ['angular', 'bootstrap', 'jquery', 'oc-lazy-load', 'angular-ui-router', 'angular-couch-potato' ]
         },
         'angular': {
             deps: ['jquery']
@@ -49,6 +49,7 @@ requirejs.config({
 
 // require the main angular app and bootstrap angular itself (equivalente all' ng-app)
 define(function () {
+  require(['oc-lazy-load'], function() {
   require(['app'], function() {
       require(['domReady'], function(domReady) {
           domReady(function() {
@@ -58,5 +59,6 @@ define(function () {
               }
           });
       });
+  });
   });
 });
