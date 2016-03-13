@@ -8,6 +8,7 @@ define(['angular-couch-potato',
 
 	var Application = angular.module('myApp', [
 		'oc.lazyLoad'
+        ,'scs.couch-potato'
 		//,'ct.ui.router.extras'
 		,'ui.router'
 		,'mod.states'
@@ -42,7 +43,7 @@ define(['angular-couch-potato',
                 Application.directive = $compileProvider.directive;
 	}    )
     .run(['$couchPotato', '$rootScope', '$state', function ($couchPotato, $rootScope, $state) {
-                    Application.lazy = $couchPotato;
+        Application.lazy = $couchPotato;
     }]);
 
 

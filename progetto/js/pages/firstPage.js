@@ -6,7 +6,7 @@ define(['app'], function(Application){
 		$timeout(function(){
 			$scope.pippo = 'cane morto';
 		}, 1000);
-
+		$scope.variab = '';
 
 	}]);
 

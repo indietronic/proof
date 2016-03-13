@@ -1,15 +1,12 @@
-<html>
-	
-	<head>
-
-		<title>Titolo pagina</title>
-	</head>
-	<body >
+<div>
 		<div ng-controller="myController">
 			<div>{{pippo}}</div>
 		</div>
+		<br>
+		<a ui-sref=".statoDelCazzo">clickme</a>
+		<button ui-sref="firstPoint">Cliccami</button>
 
-	</body>
+		<br>
+	<div ui-view="vistaDelCazzo">cazzo</div>
 
-
-</html>
+</div>

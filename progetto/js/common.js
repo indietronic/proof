@@ -49,7 +49,7 @@ requirejs.config({
 
 // require the main angular app and bootstrap angular itself (equivalente all' ng-app)
 define(function () {
-  require(['oc-lazy-load'], function() {
+
   require(['app'], function() {
       require(['domReady'], function(domReady) {
           domReady(function() {
@@ -59,6 +59,5 @@ define(function () {
               }
           });
       });
-  });
   });
 });
